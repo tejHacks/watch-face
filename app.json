@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Watch Face",
+    "slug": "watch-face",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "watchface",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.olateju.watchface",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.olateju.watchface",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#1E293B"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#1E293B",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 160
+        }
+      ],
+      "expo-localization"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
