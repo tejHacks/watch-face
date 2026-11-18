@@ -8,7 +8,10 @@ export interface BrandColors {
 export interface BrandScreen {
   name: string;
   title: string;
+  /** @deprecated iOS large titles need the scroll view as the direct child; not used. */
   large?: boolean;
+  /** Hide the native header (the screen draws its own). */
+  hideHeader?: boolean;
   modal?: boolean;
 }
 

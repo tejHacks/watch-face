@@ -30,7 +30,7 @@ export default function RootLayout() {
           contentStyle: { backgroundColor: c.bg },
         }}>
         {brand.screens.map((s) => (
-          <Stack.Screen key={s.name} name={s.name} options={{ title: s.title, headerLargeTitle: s.large, presentation: s.modal ? 'modal' : undefined }} />
+          <Stack.Screen key={s.name} name={s.name} options={{ title: s.title, headerShown: !s.hideHeader, presentation: s.modal ? 'modal' : undefined }} />
         ))}
       </Stack>
     </ThemeProvider>
