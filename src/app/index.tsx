@@ -1,3 +1,4 @@
+import { Redirect } from 'expo-router';
 import { Pressable, View } from 'react-native';
 
 import { FacePreview, type FaceConfig } from '@/components/face-preview';
@@ -10,6 +11,12 @@ const DEFAULT: FaceConfig = { style: 'analog', accent: '#F97316', showDate: true
 
 /** iPhone companion: design the face and complication, preview it live. */
 export default function Designer() {
+  const [onboarded, , onboardedReady] = useStoredState('onboarded', false);
+  if (onboardedReady && !onboarded) return <Redirect href="/onboarding" />;
+  return <DesignerScreen />;
+}
+
+function DesignerScreen() {
   const [config, setConfig] = useStoredState<FaceConfig>('face-config', DEFAULT);
   const set = (patch: Partial<FaceConfig>) => setConfig((c) => ({ ...c, ...patch }));
 
