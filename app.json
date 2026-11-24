@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "bundleIdentifier": "com.olateju.watchface",
-      "supportsTablet": true,
+      "supportsTablet": false,
       "infoPlist": {}
     },
     "android": {
